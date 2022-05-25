@@ -60,7 +60,7 @@ No entanto, podemos usar a propriedade cíclica da cifra sob módulo , portanto,
 
 4) Cifra(N) = Decifrar(26 - N)
 
-5) Dessa forma o valor de deslocamento de forma que shift = 26 - shift.
+5) Dessa forma o valor de deslocamento esta na forma de shift = 26 - shift.
 
 
 6) Por exemplo:
