@@ -52,15 +52,15 @@ SOLUCAO:
 
 1) Essa questao voce tem que observar que a string dada esta CODIFICADA atraves dessa cifra modificada da questao!!!
 
-2) A segunda linha ele dar um numero N que representa quantas posicoes a letra foi deslocada para direita.
+2) A segunda linha ele dar um numero k que representa quantas posicoes a letra foi deslocada para direita.
 
 3) Podemos escrever outra função descriptografar semelhante a criptografar, que aplicará o deslocamento
 dado na direção oposta para descriptografar o texto original.
 No entanto, podemos usar a propriedade cíclica da cifra sob módulo , portanto, podemos simplesmente observar
 
-4) Cifra(N) = Decifrar(26 - N)
+4) Cifra(k) = Decifrar(26 - k)
 
-5) Dessa forma o valor de deslocamento esta na forma de shift = 26 - shift.
+5) Dessa forma o valor de deslocamento de forma que shift = 26 - shift.
 
 
 6) Por exemplo:
@@ -75,7 +75,7 @@ void run_case() {
 	string str, res = "";
 	cin >> str >> k;
 	for (int i = (int)str.length() - 1; i >= 0; --i) {
-		res += char(int(str[i] - k + 26 - 65) % 26 + 65);
+		res += char(int(str[i] + 26 - k - 65) % 26 + 65);
 	}
 	reverse(res.begin(), res.end());
 	cout << res << '\n';
