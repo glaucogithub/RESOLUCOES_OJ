@@ -50,10 +50,21 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 SOLUCAO:
 
-Essa questao voce tem que observar que ela comeca no final da string.
-E o pulo que ele dar é: - K + 26(quantidade de letras no alfabeto (contando a partir de 0).
-Como comecei do final, a string vai estar ao reverso por isso usei o reverse().
-Por ex.: O segundo caso, a letra 'A' se for pular 10 devia estar no 'K'
+1) Essa questao voce tem que observar que a string dada esta CODIFICADA atraves dessa cifra modificada da questao!!!
+
+2) A segunda linha ele dar um numero N que representa quantas posicoes a letra foi deslocada para direita.
+
+3) Podemos escrever outra função descriptografar semelhante a criptografar, que aplicará o deslocamento
+dado na direção oposta para descriptografar o texto original.
+No entanto, podemos usar a propriedade cíclica da cifra sob módulo , portanto, podemos simplesmente observar
+
+4) Cifra(N) = Decifrar(26 - N)
+
+5) Dessa forma o valor de deslocamento de forma que shift = 26 - shift.
+
+
+6) Por exemplo:
+O segundo caso, a letra 'A' se for pular 10 devia estar no 'K'
 mas estar no Q(que é 16, 6 posicoes a frente do K que é 10). Entao isso no leva que o pulo vai ser
 o -K + 26 = -10 + 26 => 16(O valor pedido do Q)..
 
